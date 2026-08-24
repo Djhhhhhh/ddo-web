@@ -1,0 +1,453 @@
+/* ============================================================
+   ddo-code-flow 产品介绍页
+   ============================================================ */
+
+/* ---------- Hero ---------- */
+.hero {
+  padding: var(--s13) 0 var(--s12);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.title {
+  font-size: var(--fs-display);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+  margin-bottom: var(--s7);
+}
+
+.lead {
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  color: var(--text-secondary);
+  max-width: 720px;
+  margin-bottom: var(--s9);
+}
+
+.actions {
+  display: flex;
+  gap: var(--s4);
+  flex-wrap: wrap;
+  margin-bottom: var(--s11);
+}
+
+.terminal {
+  max-width: 720px;
+  margin-bottom: var(--s11);
+}
+
+/* ---------- 统计 ---------- */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--s8);
+  margin: 0;
+}
+
+.stat {
+  padding: var(--s6) 0;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.statLabel {
+  font-size: var(--fs-eyebrow);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin-bottom: var(--s3);
+}
+
+.statValue {
+  font-size: var(--fs-stat);
+  font-weight: 600;
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- 核心概念 ---------- */
+.feature {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s4);
+}
+
+.featureIcon {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--r-md);
+  background: var(--accent-subtle);
+  color: var(--accent);
+  margin-bottom: var(--s3);
+}
+
+.featureTitle {
+  font-size: var(--fs-h3);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.featureText {
+  font-size: var(--fs-body-sm);
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.featureCode {
+  margin: var(--s3) 0 0;
+  padding: var(--s5) var(--s6);
+  border-radius: var(--r-sm);
+  background: var(--code-bg);
+  color: var(--code-text);
+  font-size: 13px;
+  line-height: 1.7;
+  overflow-x: auto;
+}
+
+/* ---------- 黑板流转 ---------- */
+.flow {
+  display: flex;
+  align-items: stretch;
+  gap: var(--s3);
+  flex-wrap: wrap;
+  margin-top: var(--s8);
+}
+
+.flowGroup {
+  display: flex;
+  align-items: center;
+  gap: var(--s3);
+}
+
+.flowNode {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s2);
+  padding: var(--s5) var(--s6);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  background: var(--surface-1);
+  min-width: 132px;
+}
+
+.flowNodeBoard {
+  border-color: var(--accent-ring);
+  background: var(--accent-subtle);
+}
+
+.flowTag {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-primary);
+}
+
+.flowCap {
+  font-size: 11px;
+  color: var(--text-tertiary);
+}
+
+.flowArrow {
+  color: var(--text-tertiary);
+  display: grid;
+  place-items: center;
+}
+
+/* ---------- 流水线 ---------- */
+.workflowPanel {
+  margin-top: var(--s8);
+  padding: var(--s8);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  background: var(--surface-1);
+}
+
+.workflowMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--s6);
+  flex-wrap: wrap;
+  margin-bottom: var(--s8);
+}
+
+.workflowName {
+  font-size: var(--fs-h2);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--s2);
+}
+
+.workflowDesc {
+  font-size: var(--fs-body-sm);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 520px;
+}
+
+.workflowGates {
+  display: flex;
+  gap: var(--s3);
+  flex-wrap: wrap;
+}
+
+.pipeline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s3);
+  list-style: none;
+}
+
+.pipelineItem {
+  display: flex;
+  align-items: center;
+  gap: var(--s3);
+}
+
+.pipelineSep {
+  color: var(--text-tertiary);
+  font-size: 12px;
+}
+
+.pipelineStage {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-secondary);
+  padding: var(--s2) var(--s4);
+  border: 1px solid var(--border);
+  border-radius: var(--pill);
+  background: var(--surface-2);
+  white-space: nowrap;
+}
+
+.pipelineGate {
+  color: var(--warning);
+  border-color: color-mix(in srgb, var(--warning) 28%, transparent);
+  background: color-mix(in srgb, var(--warning) 14%, transparent);
+}
+
+.pipelineEmpty {
+  opacity: 0.45;
+  border-style: dashed;
+}
+
+/* ---------- Atom-Tasks ---------- */
+.atomGroups {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s10);
+}
+
+.atomGroupTitle {
+  font-size: var(--fs-eyebrow);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin-bottom: var(--s6);
+  padding-bottom: var(--s4);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.atomGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--s5);
+}
+
+.atomCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s4);
+  padding: var(--s5) var(--s6);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  background: var(--surface-1);
+}
+
+.atomHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s3);
+}
+
+.atomName {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.atomRoles {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s2);
+}
+
+.atomRole {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.atomRoleCons {
+  color: var(--text-tertiary);
+}
+
+.atomArrow {
+  color: var(--accent);
+  font-weight: 600;
+  margin-right: var(--s2);
+}
+
+.atomRoleCons .atomArrow {
+  color: var(--text-tertiary);
+}
+
+/* ---------- Run 模型 ---------- */
+.runGrid {
+  align-items: start;
+}
+
+.runFlow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--s7);
+  margin-top: var(--s12);
+}
+
+.runStep {
+  padding-top: var(--s6);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.runNum {
+  font-family: var(--font-mono);
+  font-size: var(--fs-eyebrow);
+  color: var(--accent);
+  display: block;
+  margin-bottom: var(--s4);
+}
+
+.runTitle {
+  font-size: var(--fs-h3);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--s3);
+}
+
+.runText {
+  font-size: var(--fs-body-sm);
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width: 1024px) {
+  .atomGrid,
+  .runFlow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 850px) {
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .stats,
+  .atomGrid,
+  .runFlow {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- 配置器 ---------- */
+.configGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s9);
+  align-items: start;
+}
+
+.configFields {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s9);
+}
+
+.configLabel {
+  display: block;
+  font-size: var(--fs-eyebrow);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin-bottom: var(--s4);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s3);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s2);
+  font-size: var(--fs-body-sm);
+  color: var(--text-secondary);
+  padding: var(--s3) var(--s5);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  background: var(--surface-1);
+  cursor: pointer;
+  transition:
+    color 0.15s ease,
+    background-color 0.15s ease,
+    border-color 0.15s ease;
+}
+.chip:hover {
+  color: var(--text-primary);
+  border-color: var(--text-tertiary);
+}
+.chipActive {
+  color: var(--accent);
+  border-color: var(--accent-ring);
+  background: var(--accent-subtle);
+}
+
+.chipFlag {
+  font-family: var(--font-mono);
+  font-size: var(--fs-caption);
+  color: var(--text-tertiary);
+}
+.chipActive .chipFlag {
+  color: var(--accent);
+}
+
+.configDesc {
+  font-size: var(--fs-body-sm);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-top: var(--s5);
+  max-width: 460px;
+}
+
+.configCode {
+  min-width: 0;
+}
+
+@media (max-width: 850px) {
+  .configGrid {
+    grid-template-columns: 1fr;
+  }
+}

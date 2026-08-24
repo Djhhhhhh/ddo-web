@@ -1,0 +1,44 @@
+.footer {
+  border-top: 1px solid var(--border-subtle);
+  padding: var(--s11) 0 var(--s12);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s3);
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--s9);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--s3);
+  margin-bottom: var(--s3);
+}
+.wordmark {
+  font-size: var(--fs-h3);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-subtle);
+}
+
+.text {
+  font-size: var(--fs-body-sm);
+  color: var(--text-secondary);
+}
+.meta {
+  font-size: var(--fs-caption);
+  color: var(--text-tertiary);
+}
+.mono {
+  font-family: var(--font-mono);
+}

@@ -1,0 +1,148 @@
+/* ============================================================
+   ddo 产品族设计系统 · Design Tokens
+   —— 本文件是 DESIGN.md 的机器可读版，样式唯一权威来源。
+   —— 组件只引用命名 token（var(--accent)），绝不写裸 hex。
+   —— 改 DESIGN.md 时，只改本文件，全站自动跟随。
+   ============================================================ */
+
+/* ---------- 中性色阶（dark 默认） ---------- */
+:root {
+  /* 表面 */
+  --canvas: #0a0a0b;
+  --surface-1: #121214;
+  --surface-2: #1b1b1f;
+  --code-bg: #0f0f11; /* 代码块恒暗，两套主题不变 */
+
+  /* 代码块文字（恒暗表面 → 文字恒亮，不随主题切换） */
+  --code-text: #ededef;
+  --code-dim: #8e8e93;
+  --code-kw: #10b981;
+  --code-str: #a78bfa;
+
+  /* 文字 */
+  --text-primary: #ededef;
+  --text-secondary: #a1a1aa;
+  --text-tertiary: #71717a;
+
+  /* 边框 */
+  --border: #27272a;
+  --border-subtle: #1f1f23;
+
+  /* 信号色（全界面唯一彩色） */
+  --accent: #10b981;
+  --accent-hover: #059669;
+  --accent-subtle: color-mix(in srgb, var(--accent) 14%, transparent);
+  --accent-ring: color-mix(in srgb, var(--accent) 45%, transparent);
+
+  /* 语义色（仅状态） */
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --info: var(--accent);
+
+  /* 数据可视化分类色板（避开绿，主序列蓝） */
+  --viz-1: #60a5fa;
+  --viz-2: #fbbf24;
+  --viz-3: #a78bfa;
+  --viz-4: #f472b6;
+  --viz-5: #22d3ee;
+  --viz-6: #71717a;
+
+  /* 层级阴影 */
+  --e0: none;
+  --e1: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --e2: 0 2px 4px rgba(0, 0, 0, 0.45), 0 1px 2px rgba(0, 0, 0, 0.3);
+  --e3: 0 4px 12px rgba(0, 0, 0, 0.5), 0 2px 4px rgba(0, 0, 0, 0.35);
+}
+
+/* ---------- 亮色主题（同等一等公民） ---------- */
+:root[data-theme='light'] {
+  --canvas: #fafafa;
+  --surface-1: #ffffff;
+  --surface-2: #f4f4f5;
+  /* --code-bg 保持恒暗，不在此覆盖 */
+
+  --text-primary: #18181b;
+  --text-secondary: #52525b;
+  --text-tertiary: #8e8e93;
+
+  --border: #e4e4e7;
+  --border-subtle: #ececef;
+
+  --accent: #059669;
+  --accent-hover: #047857;
+  --accent-subtle: color-mix(in srgb, var(--accent) 10%, transparent);
+  --accent-ring: color-mix(in srgb, var(--accent) 40%, transparent);
+
+  --success: #16a34a;
+  --warning: #d97706;
+  --danger: #dc2626;
+  --info: var(--accent);
+
+  --viz-1: #3b82f6;
+  --viz-2: #d97706;
+  --viz-3: #8b5cf6;
+  --viz-4: #ec4899;
+  --viz-5: #06b6d4;
+  --viz-6: #71717a;
+
+  --e0: none;
+  --e1: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --e2: 0 2px 4px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --e3: 0 6px 16px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+/* ---------- 间距标度（base 8，只取标度内值） ---------- */
+:root {
+  --s1: 4px;
+  --s2: 6px;
+  --s3: 8px;
+  --s4: 10px;
+  --s5: 12px;
+  --s6: 14px;
+  --s7: 16px;
+  --s8: 20px;
+  --s9: 24px;
+  --s10: 32px;
+  --s11: 40px;
+  --s12: 48px;
+  --s13: 64px;
+  --s14: 80px;
+}
+
+/* ---------- 圆角标度（仅 6 / 8 / 12，pill 仅 switch） ---------- */
+:root {
+  --r-sm: 6px;
+  --r-md: 8px;
+  --r-lg: 12px;
+  --pill: 9999px;
+}
+
+/* ---------- 控件高度标度 ---------- */
+:root {
+  --h-sm: 28px;
+  --h-md: 36px;
+  --h-lg: 44px;
+}
+
+/* ---------- 字体 ---------- */
+:root {
+  --font-sans:
+    'Manrope', system-ui, -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --font-mono: 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* 字号层级 */
+  --fs-display: 32px;
+  --fs-h1: 24px;
+  --fs-h2: 18px;
+  --fs-h3: 15px;
+  --fs-body: 14px;
+  --fs-body-sm: 13px;
+  --fs-caption: 12px;
+  --fs-eyebrow: 11px;
+  --fs-code: 13px;
+  --fs-code-sm: 12px;
+  --fs-stat: 22px;
+
+  --container: 1080px;
+}

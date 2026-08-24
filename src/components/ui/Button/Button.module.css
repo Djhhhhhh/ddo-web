@@ -1,0 +1,92 @@
+/* 按钮 —— DESIGN.md §4.2：统一高度标度，状态反馈靠边框/背景位移 */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s2);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  line-height: 1;
+  border: 1px solid transparent;
+  border-radius: var(--r-md);
+  cursor: pointer;
+  white-space: nowrap;
+  text-decoration: none;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease,
+    opacity 0.15s ease;
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* ---------- 尺寸（高度严格走标度 sm 28 / md 36 / lg 44） ---------- */
+.sm {
+  height: var(--h-sm);
+  padding: 0 var(--s4);
+  font-size: var(--fs-caption);
+  border-radius: var(--r-sm);
+}
+.md {
+  height: var(--h-md);
+  padding: 0 var(--s6);
+  font-size: var(--fs-body-sm);
+}
+.lg {
+  height: var(--h-lg);
+  padding: 0 var(--s7);
+  font-size: var(--fs-body);
+}
+
+/* ---------- 变体 ---------- */
+.primary {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+.primary:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+  color: #fff;
+}
+
+.tonal {
+  background: var(--accent-subtle);
+  color: var(--accent);
+  border-color: color-mix(in srgb, var(--accent) 25%, transparent);
+}
+.tonal:hover {
+  background: color-mix(in srgb, var(--accent) 22%, transparent);
+}
+
+.secondary {
+  background: var(--surface-2);
+  color: var(--text-primary);
+  border-color: var(--border);
+}
+.secondary:hover {
+  background: color-mix(in srgb, var(--surface-2) 80%, var(--text-primary) 8%);
+  color: var(--text-primary);
+}
+
+.ghost {
+  background: transparent;
+  color: var(--text-secondary);
+}
+.ghost:hover {
+  background: var(--surface-2);
+  color: var(--text-primary);
+}
+
+.danger {
+  background: transparent;
+  color: var(--danger);
+  border-color: color-mix(in srgb, var(--danger) 40%, transparent);
+}
+.danger:hover {
+  background: color-mix(in srgb, var(--danger) 12%, transparent);
+}

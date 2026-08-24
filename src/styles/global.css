@@ -1,0 +1,234 @@
+/* ============================================================
+   ddo 产品族设计系统 · 全局基础样式
+   reset · 滚动条收编 · 焦点环 · 排版基准 · 通用布局
+   ============================================================ */
+
+/* ---------- 滚动条收编（中性半透明细条，不用 accent） ---------- */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--text-tertiary) 30%, transparent) transparent;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--text-tertiary) 30%, transparent);
+  border-radius: 99px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: color-mix(in srgb, var(--text-tertiary) 50%, transparent);
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* ---------- Reset & 基础 ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  margin: 0;
+  background: var(--canvas);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  font-weight: 400;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--accent-hover);
+}
+
+strong {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+em {
+  font-style: normal;
+  color: var(--accent);
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+code,
+pre {
+  font-family: var(--font-mono);
+}
+
+/* 数字一律等宽 + tabular-nums 对齐 */
+.mono,
+.stat-value,
+.num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- 代码块语法色（恒暗 → 恒亮，供 CodeBlock 内容高亮） ---------- */
+.code-prompt {
+  color: var(--code-kw);
+  font-weight: 500;
+}
+.code-dim {
+  color: var(--code-dim);
+}
+.code-kw {
+  color: var(--code-kw);
+}
+.code-str {
+  color: var(--code-str);
+}
+.code-gate {
+  color: var(--warning);
+}
+
+/* ---------- 焦点环（统一 accent-ring 3px，无障碍硬要求） ---------- */
+:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--accent-ring);
+  border-radius: var(--r-sm);
+}
+
+/* ---------- 容器与 section 通用 ---------- */
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--s9);
+}
+
+.section {
+  padding: var(--s13) 0;
+}
+.section--alt {
+  background: var(--surface-1);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+/* ---------- 排版工具 ---------- */
+.eyebrow {
+  font-size: var(--fs-eyebrow);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin-bottom: var(--s7);
+}
+
+.section-title {
+  font-size: var(--fs-h1);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+  margin-bottom: var(--s5);
+}
+
+.section-lead {
+  font-size: var(--fs-body);
+  color: var(--text-secondary);
+  max-width: 720px;
+  margin-bottom: var(--s11);
+}
+
+.sub-title {
+  font-size: var(--fs-h2);
+  font-weight: 600;
+  margin-top: var(--s12);
+  margin-bottom: var(--s3);
+}
+
+/* ---------- 栅格 ---------- */
+.grid {
+  display: grid;
+  gap: var(--s8);
+}
+.grid--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width: 1024px) {
+  .grid--4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 850px) {
+  .grid--3,
+  .grid--2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .grid--4 {
+    grid-template-columns: 1fr;
+  }
+  .section {
+    padding: var(--s12) 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}

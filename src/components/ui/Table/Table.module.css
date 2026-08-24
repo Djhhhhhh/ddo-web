@@ -1,0 +1,51 @@
+.wrap {
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  overflow-x: auto;
+  box-shadow: var(--e1);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--fs-body-sm);
+}
+
+.table thead th {
+  text-align: left;
+  font-size: var(--fs-eyebrow);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-tertiary);
+  padding: var(--s5) var(--s4);
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.table tbody td {
+  padding: 9px 10px;
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  vertical-align: top;
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.table tbody tr:hover {
+  background: var(--surface-2);
+}
+
+/* 等宽数据列 / 强调单元格 */
+.table :global(.cell-mono) {
+  font-family: var(--font-mono);
+  font-size: var(--fs-code-sm);
+  font-variant-numeric: tabular-nums;
+  color: var(--text-primary);
+}
+.table :global(.cell-strong) {
+  font-weight: 500;
+  color: var(--text-primary);
+}
