@@ -42,8 +42,8 @@ src/
 
 ## 设计系统
 
-视觉规则以 `../ddo-design/DESIGN.md` 为唯一权威，本仓库 `src/styles/tokens.css` 是其机器可读翻译。改设计只改 token 文件，全站自动跟随。
+视觉规则以 `design/DESIGN.md`（规范索引入口）为权威，具体规则分层在 `design/foundations/` 与 `design/components/`；本仓库 `src/styles/tokens.css` 是其机器可读翻译。改设计只改 token 文件，全站自动跟随。
 
 ## 贡献
 
-开发规范见 [CONTRIBUTING.md](./CONTRIBUTING.md)。新增产品只需三步：加元数据 → 写介绍页 → 加路由。
+开发与 AI 指引见 [AGENTS.md](./AGENTS.md)。新增产品只需三步：加元数据 → 写介绍页 → 加路由。

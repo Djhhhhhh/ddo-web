@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# ddo-code-flow 流水线运行状态
+.ddo/
