@@ -1,0 +1,18 @@
+{
+  "version": "1.0.0",
+  "tasks": [
+    { "id": "task-01", "file": "task-01.md", "title": "基础规则迁移（一）：色彩/排版/间距圆角/层级阴影", "dependsOn": [] },
+    { "id": "task-02", "file": "task-02.md", "title": "基础规则迁移（二）：控件标度/图标/响应式/Do&Don't/token速查", "dependsOn": [] },
+    { "id": "task-03", "file": "task-03.md", "title": "组件规则迁移（一）：按钮/标签/表单/导航/卡片", "dependsOn": [] },
+    { "id": "task-04", "file": "task-04.md", "title": "组件规则迁移（二）：Tabs/密集表格/Toast/滚动条", "dependsOn": [] },
+    { "id": "task-05", "file": "task-05.md", "title": "整体索引 design/DESIGN.md", "dependsOn": ["task-01", "task-02", "task-03", "task-04"] },
+    { "id": "task-06", "file": "task-06.md", "title": "入口层 AGENTS.md 与旧指向修正", "dependsOn": ["task-05"] },
+    { "id": "task-07", "file": "task-07.md", "title": "TDD 断言转绿", "dependsOn": ["task-06"] }
+  ],
+  "parallelGroups": [
+    ["task-01", "task-02", "task-03", "task-04"],
+    ["task-05"],
+    ["task-06"],
+    ["task-07"]
+  ]
+}

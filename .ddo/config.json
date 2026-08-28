@@ -1,0 +1,5 @@
+{
+  "$schema": "https://ddo-code-flow/config.schema.json#/$defs/projectConfig",
+  "contextPaths": ["CLAUDE.md", "DESIGN.md"],
+  "contextOptional": true
+}
