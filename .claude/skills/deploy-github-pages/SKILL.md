@@ -86,7 +86,7 @@ jobs:
 
 只有一行：自定义域名（当前为 `ddoai.cn`）。构建时会原样拷入 `dist/` 根部。
 
-### 3. 提交前检查（CLAUDE.md 要求）
+### 3. 提交前检查（AGENTS.md 要求）
 
 ```bash
 source ~/.nvm/nvm.sh && nvm exec 22 npm run lint
